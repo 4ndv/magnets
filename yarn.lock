@@ -246,6 +246,14 @@
   dependencies:
     "@chakra-ui/utils" "1.8.2"
 
+"@chakra-ui/icons@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.0.15.tgz#90b0e3c2c161c5a100d6b83a277941b22945f880"
+  integrity sha512-MMuPwmeCil9vAXceIN/Fxn6CNHbhkLofFQaKUfs+UaBsviiU2tvS0nqGaxm/9FNzLr5ithPVWpbz3uV7DXc77g==
+  dependencies:
+    "@chakra-ui/icon" "1.1.11"
+    "@types/react" "^17.0.0"
+
 "@chakra-ui/image@1.0.20":
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/@chakra-ui/image/-/image-1.0.20.tgz#18057ca248f17c813ad60812ac4c7965a1de1fda"
@@ -957,6 +965,25 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
+"@types/prop-types@*":
+  version "15.7.4"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
+  integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
+
+"@types/react@^17.0.0":
+  version "17.0.24"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.24.tgz#7e1b3f78d0fc53782543f9bce6d949959a5880bd"
+  integrity sha512-eIpyco99gTH+FTI3J7Oi/OH8MZoFMJuztNRimDOJwH4iGIsKV2qkGnk4M9VzlaVWeEEWLWSQRy0FEA0Kz218cg==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
+
 "@types/warning@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/warning/-/warning-3.0.0.tgz#0d2501268ad8f9962b740d387c4654f5f8e23e52"
@@ -1468,6 +1495,11 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
+confusing-browser-globals@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.10.tgz#30d1e7f3d1b882b25ec4933d1d1adac353d20a59"
+  integrity sha512-gNld/3lySHwuhaVluJUKLePYirM3QNCKzVxqAdhJII9/WXKVX5PURzMVJspS1jTslSqjeuG4KMVTSouit5YPHA==
+
 console-browserify@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/console-browserify/-/console-browserify-1.2.0.tgz#67063cef57ceb6cf4993a2ab3a55840ae8c49336"
@@ -1816,6 +1848,24 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
+eslint-config-airbnb-base@^14.2.1:
+  version "14.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-14.2.1.tgz#8a2eb38455dc5a312550193b319cdaeef042cd1e"
+  integrity sha512-GOrQyDtVEc1Xy20U7vsB2yAoB4nBlfH5HZJeatRXHleO+OS5Ot+MWij4Dpltw4/DyIkqUfqz1epfhVR5XWWQPA==
+  dependencies:
+    confusing-browser-globals "^1.0.10"
+    object.assign "^4.1.2"
+    object.entries "^1.1.2"
+
+eslint-config-airbnb@^18.2.1:
+  version "18.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-18.2.1.tgz#b7fe2b42f9f8173e825b73c8014b592e449c98d9"
+  integrity sha512-glZNDEZ36VdlZWoxn/bUR1r/sdFKPd1mHPbqUtkctgNG4yT2DLLtJ3D+yCV+jzZCc2V1nBVkmdknOJBZ5Hc0fg==
+  dependencies:
+    eslint-config-airbnb-base "^14.2.1"
+    object.assign "^4.1.2"
+    object.entries "^1.1.2"
+
 eslint-config-next@11.1.2:
   version "11.1.2"
   resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-11.1.2.tgz#73c918f2fa6120d5f65080bf3fcf6b154905707e"
@@ -1839,7 +1889,7 @@ eslint-import-resolver-node@^0.3.4, eslint-import-resolver-node@^0.3.6:
     debug "^3.2.7"
     resolve "^1.20.0"
 
-eslint-import-resolver-typescript@^2.4.0:
+eslint-import-resolver-typescript@^2.4.0, eslint-import-resolver-typescript@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-2.5.0.tgz#07661966b272d14ba97f597b51e1a588f9722f0a"
   integrity sha512-qZ6e5CFr+I7K4VVhQu3M/9xGv9/YmwsEXrsm3nimw8vWaVHRDrQRp26BgCypTxBp3vUp4o5aVEJRiy0F2DFddQ==
@@ -1896,12 +1946,17 @@ eslint-plugin-jsx-a11y@^6.4.1:
     jsx-ast-utils "^3.1.0"
     language-tags "^1.0.5"
 
+eslint-plugin-react-hooks@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-1.7.0.tgz#6210b6d5a37205f0b92858f895a4e827020a7d04"
+  integrity sha512-iXTCFcOmlWvw4+TOE8CLWj6yX1GwzT0Y6cUfHHZqWnSk144VmVIRcVGtUAzrLES7C798lmvnt02C7rxaOX1HNA==
+
 eslint-plugin-react-hooks@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
   integrity sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
 
-eslint-plugin-react@^7.23.1:
+eslint-plugin-react@^7.21.5, eslint-plugin-react@^7.23.1:
   version "7.26.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.26.0.tgz#3ae019a35d542b98e5af9e2f96b89c232c74b55b"
   integrity sha512-dceliS5itjk4EZdQYtLMz6GulcsasguIs+VTXuiC7Q5IPIdGTkyfXVdmsQOqEhlD9MciofH4cMcT1bw1WWNxCQ==
@@ -1946,7 +2001,7 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz#f65328259305927392c938ed44eb0a5c9b2bd303"
   integrity sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==
 
-eslint@7.32.0:
+eslint@^7.2.0:
   version "7.32.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.32.0.tgz#c6d328a14be3fb08c8d1d21e12c02fdb7a2a812d"
   integrity sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA==
@@ -3031,7 +3086,7 @@ object.assign@^4.1.2:
     has-symbols "^1.0.1"
     object-keys "^1.1.1"
 
-object.entries@^1.1.4:
+object.entries@^1.1.2, object.entries@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/object.entries/-/object.entries-1.1.4.tgz#43ccf9a50bc5fd5b649d45ab1a579f24e088cafd"
   integrity sha512-h4LWKWE+wKQGhtMjZEBud7uLGhqyLwj8fpHOarZhD2uY3C9cRtk57VQ89ke3moByLXMedqs3XCHzyb4AmA2DjA==
@@ -3437,6 +3492,11 @@ react-focus-lock@2.5.0:
     react-clientside-effect "^1.2.2"
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
+
+react-icons@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
+  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
 
 react-is@17.0.2:
   version "17.0.2"

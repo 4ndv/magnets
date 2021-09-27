@@ -1,12 +1,13 @@
 import { useRef, useState, useEffect } from 'react';
 import {
   chakra, Link, HStack, Flex, Box, useColorMode, useColorModeValue, Icon, IconButton,
+  Button,
 } from '@chakra-ui/react';
 import { useViewportScroll } from 'framer-motion';
 import { FaMoon, FaSun, FaHeart } from 'react-icons/fa';
 import { AiFillGithub } from 'react-icons/ai';
 
-function Header() {
+export default function Header() {
   const { toggleColorMode: toggleMode } = useColorMode();
   const text = useColorModeValue('dark', 'light');
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
@@ -21,40 +22,11 @@ function Header() {
   useEffect(() => scrollY.onChange(() => setY(scrollY.get())), [scrollY]);
 
   const SponsorButton = (
-    <Box
-      display="flex"
-      alignItems="center"
-      as="a"
-      href="https://lynx.pink/buymeacoffee"
-      target="_blank"
-      rel="noopener noreferrer"
-      bg="white"
-      borderWidth="1px"
-      borderColor="gray.200"
-      px="1em"
-      minH="36px"
-      rounded="md"
-      fontSize="sm"
-      color="gray.800"
-      outline="0"
-      transition="all 0.3s"
-      _hover={{
-        bg: 'gray.200',
-        borderColor: 'gray.400',
-      }}
-      _active={{
-        borderColor: 'gray.200',
-      }}
-      _focus={{
-        boxShadow: 'outline',
-      }}
-      ml={5}
-    >
-      <Icon as={FaHeart} w="4" h="4" color="red.500" mr="2" />
-      <Box as="strong" lineHeight="inherit" fontWeight="semibold">
+    <Link href="https://lynx.pink/buymeacoffee" isExternal>
+      <Button leftIcon={<FaHeart />} colorScheme="pink" variant="solid" ml={4}>
         Sponsor
-      </Box>
-    </Box>
+      </Button>
+    </Link>
   );
 
   return (
@@ -113,5 +85,3 @@ function Header() {
     </Box>
   );
 }
-
-export default Header;

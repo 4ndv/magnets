@@ -10,7 +10,6 @@ export default function Home() {
       <Head>
         <title>Magnets - Online Magnet Links Editor</title>
         <meta name="description" content="Magnets is a visual magnet link generator, editor and parser. Convert torrent files to magnets and vice versa, edit and import trackers, and much more" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box mx="auto" p="6" maxW="1200px">
         <Editor />

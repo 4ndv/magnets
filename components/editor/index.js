@@ -54,7 +54,7 @@ export default function Editor() {
 
   return (
     <>
-      <Stack direction={{ sm: 'column', md: 'row' }} spacing={1}>
+      <Stack direction={{ base: 'column', md: 'row' }} spacing={1}>
         <ImportMagnetModal replaceEditorState={replace} />
         <ImportTorrentFileModal replaceEditorState={replace} />
         <Button

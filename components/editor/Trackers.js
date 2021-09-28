@@ -1,5 +1,5 @@
 import {
-  FormControl, FormLabel, FormHelperText,
+  FormControl, FormLabel, FormHelperText, Link,
   Button, Stack, Menu, MenuButton, MenuList, MenuItem,
 } from '@chakra-ui/react';
 import { FaRegTrashAlt, FaChevronDown } from 'react-icons/fa';
@@ -32,7 +32,7 @@ export default function Trackers({
       <FormLabel>
         Trackers
       </FormLabel>
-      <Stack direction={{ sm: 'column', md: 'row' }} spacing={1} my={2}>
+      <Stack direction={{ base: 'column', md: 'row' }} spacing={1} my={2}>
         <Button
           leftIcon={<FaRegTrashAlt />}
           colorScheme="red"
@@ -44,7 +44,7 @@ export default function Trackers({
         </Button>
         <Menu>
           <MenuButton as={Button} variant="outline" rightIcon={<FaChevronDown />}>
-            Add from github.com/ngosang/trackerslist
+            Add from trackerslist*
           </MenuButton>
           <MenuList>
             {trackerslistVariants.map((variant) => (
@@ -56,6 +56,12 @@ export default function Trackers({
       <AutosizeTextarea value={announce} name="announce" onChange={changeField} />
       <FormHelperText>
         List of the trackers which will be used to find peers
+      </FormHelperText>
+      <FormHelperText>
+        *
+        <Link href="https://github.com/ngosang/trackerslist" textDecoration="underline" isExternal>trackerslist</Link>
+        {' '}
+        - is a daily updated list of public bittorrent trackers
       </FormHelperText>
     </FormControl>
   );

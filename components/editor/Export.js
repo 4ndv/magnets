@@ -14,10 +14,10 @@ export default function Export({ torrentObject }) {
 
   if (hashIsValid) {
     exportButtons = (
-      <Stack direction={{ sm: 'column', md: 'row' }} spacing={1} mb={3}>
+      <Stack direction={{ base: 'column', md: 'row' }} spacing={1} mb={3}>
         <CopyButton code={code} />
         <Link href={`https://itorrents.org/torrent/${infoHash}.torrent`} isExternal>
-          <Button leftIcon={<AiFillFile />} variant="outline">
+          <Button leftIcon={<AiFillFile />} variant="outline" w="100%">
             Download .torrent from cache
           </Button>
         </Link>

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Center, useColorModeValue, Icon } from '@chakra-ui/react';

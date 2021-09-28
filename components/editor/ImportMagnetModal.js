@@ -2,7 +2,7 @@ import {
   useDisclosure, Button, Modal, ModalContent, ModalOverlay, ModalHeader,
   ModalCloseButton, ModalBody, ModalFooter, Textarea,
 } from '@chakra-ui/react';
-import { FaMagnet } from 'react-icons/fa';
+import { IoMagnet } from 'react-icons/io5';
 import create from 'zustand';
 import { parse } from '@/lib/parser';
 
@@ -56,7 +56,7 @@ export default function ImportMagnetModal({ replaceEditorState }) {
 
   return (
     <>
-      <Button leftIcon={<FaMagnet />} colorScheme="teal" variant="outline" onClick={onOpen}>
+      <Button leftIcon={<IoMagnet />} colorScheme="teal" variant="outline" onClick={onOpen}>
         Import from magnet link
       </Button>
 

@@ -34,6 +34,7 @@ const useStore = create((set) => ({
     });
   },
   clearAnnounce: () => set({ announce: '', edited: true }),
+  replaceAnnounce: (value) => set({ announce: value, edited: true }),
 }));
 
 export default function Editor() {
@@ -45,6 +46,7 @@ export default function Editor() {
   const changeName = useStore((state) => state.changeName);
   const announce = useStore((state) => state.announce);
   const clearAnnounce = useStore((state) => state.clearAnnounce);
+  const replaceAnnounce = useStore((state) => state.replaceAnnounce);
   const xl = useStore((state) => state.xl);
   const torrentObject = {
     infoHash, name, announce, xl,
@@ -62,10 +64,10 @@ export default function Editor() {
           onClick={useStore((state) => state.clear)}
           disabled={!edited}
         >
-          Reset
+          Reset form
         </Button>
       </Stack>
-      <SimpleGrid columns={{ sm: 1, md: 2 }} mt={5} spacing={5}>
+      <SimpleGrid columns={{ sm: 1, md: 2 }} mt={5} spacing={8}>
         <Box>
           <FormControl id="infoHash" isRequired>
             <FormLabel>
@@ -78,7 +80,7 @@ export default function Editor() {
               <Link isExternal textDecoration="underline" href="https://stackoverflow.com/a/28601408/5257518">here</Link>
             </FormHelperText>
           </FormControl>
-          <FormControl id="name" mt={5}>
+          <FormControl id="name" mt={7}>
             <FormLabel>
               Name
             </FormLabel>
@@ -87,16 +89,21 @@ export default function Editor() {
               It will appear in the torrent client, not required
             </FormHelperText>
           </FormControl>
-          <FormControl id="xl" mt={5}>
+          <FormControl id="xl" mt={7}>
             <FormLabel>
               Size (in bytes)
             </FormLabel>
             <Input name="xl" value={xl} onChange={changeField} />
             <FormHelperText>
-              Allows to show size in the torrent client before data is aquired from the peers, not required, may be unsupported by some clients
+              Allows to show size in the torrent client before data is aquired from the peers. Not required, may be unsupported by some clients
             </FormHelperText>
           </FormControl>
-          <Trackers announce={announce} changeField={changeField} clearAnnounce={clearAnnounce} />
+          <Trackers
+            announce={announce}
+            changeField={changeField}
+            clearAnnounce={clearAnnounce}
+            replaceAnnounce={replaceAnnounce}
+          />
         </Box>
         <Box>
           <Export torrentObject={torrentObject} />

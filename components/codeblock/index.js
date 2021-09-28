@@ -1,6 +1,5 @@
 import { Box } from '@chakra-ui/react';
 import CodeContainer from './CodeContainer';
-import CopyButton from './CopyButton';
 
 function CodeBlock({ code }) {
   return (
@@ -8,7 +7,6 @@ function CodeBlock({ code }) {
       <CodeContainer overflow="hidden">
         {code}
       </CodeContainer>
-      <CopyButton top="4" code={code} />
     </Box>
   );
 }

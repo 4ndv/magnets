@@ -1,11 +1,35 @@
+import {
+  Button, Heading, Link, Stack,
+} from '@chakra-ui/react';
+import { AiFillFile } from 'react-icons/ai';
 import { toMagnet, isValidInfoHash } from '@/lib/parser';
 import CodeBlock from '@/components/codeblock';
+import CopyButton from './CopyButton';
 
 export default function Export({ torrentObject }) {
   const { infoHash } = torrentObject;
-  const code = isValidInfoHash(infoHash) ? toMagnet(torrentObject) : 'Specify valid Info Hash to generate magnet link';
+  const hashIsValid = isValidInfoHash(infoHash);
+  const code = hashIsValid ? toMagnet(torrentObject) : 'Specify valid Info Hash to generate magnet link';
+  let exportButtons = null;
+
+  if (hashIsValid) {
+    exportButtons = (
+      <Stack direction={{ sm: 'column', md: 'row' }} spacing={1} mb={3}>
+        <CopyButton code={code} />
+        <Link href={`https://itorrents.org/torrent/${infoHash}.torrent`} isExternal>
+          <Button leftIcon={<AiFillFile />} variant="outline">
+            Download .torrent from cache
+          </Button>
+        </Link>
+      </Stack>
+    );
+  }
 
   return (
-    <CodeBlock code={code} />
+    <>
+      <Heading size="lg" mb={2}>Result</Heading>
+      {exportButtons}
+      <CodeBlock code={code} />
+    </>
   );
 }

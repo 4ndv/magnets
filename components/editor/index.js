@@ -8,11 +8,12 @@ import ImportMagnetModal from './ImportMagnetModal';
 import ImportTorrentFileModal from './ImportTorrentFileModal';
 import AutosizeTextarea from '@/components/autosize-textarea';
 import Export from './Export';
+import Trackers from './Trackers';
 
 const initialState = {
   infoHash: '',
   name: '',
-  announce: [],
+  announce: '',
   xl: '',
   edited: false,
 };
@@ -27,18 +28,12 @@ const useStore = create((set) => ({
   },
   changeName: (e) => {
     const { value } = e.target;
-    set({ name: value.replace(/(\r\n|\n|\r)/gm, '').replace(/\s{2,}/g, ' '), edited: true });
+    set({
+      name: value.replace(/(\r\n|\n|\r)/gm, '').replace(/\s{2,}/g, ' '),
+      edited: true,
+    });
   },
-  removeAnnounce: (index) => {
-    const { announce } = set();
-    announce.splice(index, 1);
-    set({ announce, edited: true });
-  },
-  addAnnounce: (link) => {
-    const { announce } = set();
-    announce.push(link);
-    set({ announce, edited: true });
-  },
+  clearAnnounce: () => set({ announce: '', edited: true }),
 }));
 
 export default function Editor() {
@@ -49,6 +44,7 @@ export default function Editor() {
   const name = useStore((state) => state.name);
   const changeName = useStore((state) => state.changeName);
   const announce = useStore((state) => state.announce);
+  const clearAnnounce = useStore((state) => state.clearAnnounce);
   const xl = useStore((state) => state.xl);
   const torrentObject = {
     infoHash, name, announce, xl,
@@ -88,7 +84,7 @@ export default function Editor() {
             </FormLabel>
             <AutosizeTextarea name="name" value={name} onChange={changeName} />
             <FormHelperText>
-              It will appear in the torrent client
+              It will appear in the torrent client, not required
             </FormHelperText>
           </FormControl>
           <FormControl id="xl" mt={5}>
@@ -97,17 +93,10 @@ export default function Editor() {
             </FormLabel>
             <Input name="xl" value={xl} onChange={changeField} />
             <FormHelperText>
-              Allows to show size in the torrent client before data is aquired from the peers
+              Allows to show size in the torrent client before data is aquired from the peers, not required, may be unsupported by some clients
             </FormHelperText>
           </FormControl>
-          <FormControl id="xl" mt={5}>
-            <FormLabel>
-              Trackers
-            </FormLabel>
-            <FormHelperText>
-              List of the trackers which will be used to find peers
-            </FormHelperText>
-          </FormControl>
+          <Trackers announce={announce} changeField={changeField} clearAnnounce={clearAnnounce} />
         </Box>
         <Box>
           <Export torrentObject={torrentObject} />

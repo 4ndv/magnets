@@ -22,7 +22,7 @@ export default function Header() {
   useEffect(() => scrollY.onChange(() => setY(scrollY.get())), [scrollY]);
 
   const SponsorButton = (
-    <Link href="https://lynx.pink/buymeacoffee" isExternal>
+    <Link href="https://lynx.pink/buymeacoffee/" isExternal>
       <Button leftIcon={<FaHeart />} colorScheme="pink" variant="solid" ml={4}>
         Sponsor
       </Button>

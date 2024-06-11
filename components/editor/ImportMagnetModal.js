@@ -16,9 +16,9 @@ const useStore = create((set) => ({
   changeLink: ({ target: { value: link } }) => {
     set({ link, valid: true });
   },
-  parseAndValidate: (magnet) => {
+  parseAndValidate: async (magnet) => {
     try {
-      const data = parse(magnet);
+      const data = await parse(magnet);
 
       set({ valid: true });
 
@@ -45,8 +45,8 @@ export default function ImportMagnetModal({ replaceEditorState }) {
     onOpen: () => reset(),
   });
 
-  const importLink = () => {
-    const data = parseAndValidate(link);
+  const importLink = async () => {
+    const data = await parseAndValidate(link);
 
     if (data) {
       replaceEditorState(data);

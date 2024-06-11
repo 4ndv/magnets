@@ -14,7 +14,7 @@ const useStore = create((set) => ({
     const buffer = await readFile(file);
 
     try {
-      const data = parse(buffer);
+      const data = await parse(buffer);
 
       set({ valid: true });
 

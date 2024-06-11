@@ -1,9 +1,7 @@
-import { useRef, useState, useEffect } from 'react';
 import {
   chakra, Link, HStack, Flex, Box, useColorMode, useColorModeValue, Icon, IconButton,
   Button,
 } from '@chakra-ui/react';
-import { useViewportScroll } from 'framer-motion';
 import { FaMoon, FaSun, FaHeart } from 'react-icons/fa';
 import { AiFillGithub } from 'react-icons/ai';
 
@@ -13,13 +11,6 @@ export default function Header() {
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
   const bg = useColorModeValue('gray.100', 'gray.900');
-  const ref = useRef();
-  const [y, setY] = useState(0);
-  const { height = 0 } = ref.current ? ref.current.getBoundingClientRect() : {};
-
-  const { scrollY } = useViewportScroll();
-
-  useEffect(() => scrollY.onChange(() => setY(scrollY.get())), [scrollY]);
 
   const SponsorButton = (
     <Link href="https://lynx.pink/buymeacoffee/" isExternal>
@@ -32,9 +23,6 @@ export default function Header() {
   return (
     <Box pos="relative">
       <chakra.header
-        ref={ref}
-        shadow={y > height ? 'sm' : undefined}
-        transition="box-shadow 0.2s"
         bg={bg}
         w="full"
         overflowY="hidden"

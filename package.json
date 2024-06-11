@@ -10,11 +10,11 @@
     "gh-pages": "BASE_URL=/magnets next build && next export && touch out/.nojekyll && gh-pages -d out -t"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.8",
+    "@chakra-ui/react": "^1",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "buffer": "^6.0.3",
-    "framer-motion": "^4",
+    "framer-motion": "^6",
     "lodash": "^4.17.21",
     "next": "12",
     "parse-torrent": "^9.1.4",

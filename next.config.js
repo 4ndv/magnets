@@ -1,4 +1,5 @@
 module.exports = {
+  output: 'export',
   reactStrictMode: true,
   assetPrefix: process.env.BASE_URL || '',
   env: {

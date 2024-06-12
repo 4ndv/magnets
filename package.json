@@ -20,7 +20,7 @@
     "parse-torrent": "^11.0.16",
     "react": "17",
     "react-dom": "17",
-    "react-dropzone": "^11.4.2",
+    "react-dropzone": "^14.2.3",
     "react-icons": "^5.2.1",
     "react-textarea-autosize": "^8.3.3",
     "zustand": "^3.5.10"

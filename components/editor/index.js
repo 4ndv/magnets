@@ -3,7 +3,7 @@ import {
   Link,
 } from '@chakra-ui/react';
 import { FaRegTrashAlt } from 'react-icons/fa';
-import create from 'zustand';
+import { create } from 'zustand';
 import ImportMagnetModal from './ImportMagnetModal';
 import ImportTorrentFileModal from './ImportTorrentFileModal';
 import AutosizeTextarea from '@/components/autosize-textarea';

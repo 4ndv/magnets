@@ -4,7 +4,7 @@ import {
   Alert, AlertIcon, AlertTitle, AlertDescription,
 } from '@chakra-ui/react';
 import { AiFillFileAdd } from 'react-icons/ai';
-import create from 'zustand';
+import { create } from 'zustand';
 import { parse, readFile } from '@/lib/parser';
 import Dropzone from '@/components/dropzone';
 

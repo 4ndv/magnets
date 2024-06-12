@@ -3,7 +3,7 @@ import {
   ModalCloseButton, ModalBody, ModalFooter, Textarea,
 } from '@chakra-ui/react';
 import { IoMagnet } from 'react-icons/io5';
-import create from 'zustand';
+import { create } from 'zustand';
 import { parse } from '@/lib/parser';
 
 const initialState = {

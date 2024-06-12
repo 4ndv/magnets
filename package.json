@@ -23,7 +23,7 @@
     "react-dropzone": "^14.2.3",
     "react-icons": "^5.2.1",
     "react-textarea-autosize": "^8.5.3",
-    "zustand": "^3.5.10"
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "eslint": "^7.2.0",

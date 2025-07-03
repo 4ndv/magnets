@@ -4,9 +4,9 @@ import {
 } from '@chakra-ui/react';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import { create } from 'zustand';
+import AutosizeTextarea from '@/components/autosize-textarea';
 import ImportMagnetModal from './ImportMagnetModal';
 import ImportTorrentFileModal from './ImportTorrentFileModal';
-import AutosizeTextarea from '@/components/autosize-textarea';
 import Export from './Export';
 import Trackers from './Trackers';
 
